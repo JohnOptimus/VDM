@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voz de Mando | Academia Ejecutiva de Comunicación y Liderazgo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Esferas decorativas de fondo para efecto Light Glassmorphism -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- Overlay móvil para menú lateral -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- MENÚ LATERAL IZQUIERDO DE CURSOS -->
+  <aside class="courses-sidebar" id="courses-sidebar">
+    <div class="sidebar-header">
+      <div class="brand">
+        <span class="brand-badge">VM</span>
+        <div>
+          <span class="brand-title">Voz de Mando</span>
+          <span class="brand-sub">Executive Academy</span>
+        </div>
+      </div>
+      <button type="button" class="close-sidebar-btn" id="close-sidebar-btn" aria-label="Cerrar menú">✕</button>
+    </div>
+
+    <div class="sidebar-section-label">PROGRAMAS DE ENTRENAMIENTO</div>
+
+    <nav class="course-nav-list" id="course-nav-list"></nav>
+
+    <div class="sidebar-footer-card">
+      <div class="total-academy-info">
+        <span>Progreso Total Academia</span>
+        <strong id="academy-total-text">0%</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="academy-total-bar" style="width: 0%"></div>
+      </div>
+      <button type="button" class="btn-reset-mini" id="reset-all-btn">Reiniciar toda la academia</button>
+    </div>
+  </aside>
+
+  <!-- CONTENEDOR PRINCIPAL DERECHO -->
+  <div class="app-shell">
+    <!-- Barra de navegación superior fija -->
+    <header class="glass-header">
+      <div class="container header-content">
+        <div class="header-left">
+          <button type="button" class="menu-toggle-btn" id="menu-toggle-btn" aria-label="Abrir menú de cursos">
+            ☰ <span>Cursos</span>
+          </button>
+          <div class="active-course-indicator">
+            <small id="header-course-badge">Curso 1 de 5</small>
+            <strong id="header-course-title">Habla con claridad, proyecta autoridad</strong>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#metodologia">Pilares</a>
+          <a href="#aula">Aula Interactiva</a>
+          <a href="#laboratorio">Laboratorio</a>
+        </nav>
+
+        <!-- Barra de progreso del curso activo -->
+        <div class="progress-widget" title="Tu avance en el curso seleccionado">
+          <div class="progress-info">
+            <span>Avance del curso</span>
+            <strong id="global-progress-text">0% (0/15)</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="global-progress-bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECCIÓN 1: HERO DINÁMICO POR CURSO -->
+      <section id="inicio" class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy glass-card">
+            <div class="pill-tag" id="hero-tag">Programa Ejecutivo • 15 Lecciones Prácticas</div>
+            <h1 id="hero-title">Habla con claridad, proyecta autoridad y lidera cualquier sala.</h1>
+            <p id="hero-description">
+              Domina las articulaciones verbales, la cadencia vocal y las estructuras mentales que distinguen a los grandes líderes en reuniones críticas, negociaciones y gestión de equipos.
+            </p>
+            <div class="hero-actions">
+              <a href="#aula" class="btn-primary">Comenzar Entrenamiento</a>
+              <button type="button" class="btn-secondary" id="reset-course-btn">Reiniciar este Curso</button>
+            </div>
+            <div class="hero-metrics" id="hero-metrics"></div>
+          </div>
+
+          <div class="hero-visual glass-card">
+            <img
+              id="hero-image"
+              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80"
+              alt="Liderazgo ejecutivo"
+              class="hero-img"
+            />
+            <div class="floating-glass-note">
+              <span class="dot-live"></span>
+              <div>
+                <strong id="hero-note-title">Regla de los 30 Segundos</strong>
+                <p id="hero-note-text">“La claridad estructural transmite más autoridad que el volumen de voz.”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 2: PILARES DE METODOLOGÍA DEL CURSO -->
+      <section id="metodologia" class="pillars-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill-tag" id="pillars-tag">Arquitectura del Programa</span>
+            <h2 id="pillars-title">Los 4 pilares de una comunicación ejecutiva impecable</h2>
+          </div>
+          <div class="pillars-grid" id="pillars-grid"></div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: AULA INTERACTIVA CON EJERCICIOS Y PROGRESO -->
+      <section id="aula" class="classroom-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill-tag">Plataforma de Entrenamiento</span>
+            <h2>Aula Interactiva: Casos, Prácticas y Ensayos</h2>
+            <p>Selecciona cualquier unidad, estudia el caso aplicado y completa el ejercicio o ensayo para registrar tu avance.</p>
+          </div>
+
+          <!-- Filtros por módulo -->
+          <div class="module-tabs" id="module-tabs"></div>
+
+          <div class="classroom-layout">
+            <!-- Lista de lecciones del curso -->
+            <aside class="glass-card lesson-sidebar" id="lesson-list"></aside>
+
+            <!-- Panel principal de estudio y ejercicio -->
+            <div class="glass-card lesson-stage" id="lesson-stage"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: LABORATORIO DE ARTICULACIONES EJECUTIVAS -->
+      <section id="laboratorio" class="lab-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="pill-tag">Guía Rápida de Bolsillo</span>
+            <h2 id="lab-title">Articulaciones Verbales: De Reactivo a Líder Estratégico</h2>
+          </div>
+          <div class="lab-grid" id="lab-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="glass-footer">
+      <div class="container footer-content">
+        <p><strong>Voz de Mando</strong> — Academia Ejecutiva de Comunicación, Feedback y Oratoria.</p>
+        <span id="footer-status">Progreso de todos los cursos guardado localmente en tu navegador.</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BASE DE DATOS DE LOS 5 CURSOS Y LÓGICA INTERACTIVA -->
+  <script>
+    const coursesDatabase = [
+      /* =================================================================
+         CURSO 1: HABLA CON CLARIDAD, PROYECTA AUTORIDAD
+         ================================================================= */
+      {
+        id: "autoridad",
+        number: "01",
+        shortTitle: "Habla con claridad, proyecta autoridad",
+        subtitle: "Articulación ejecutiva y liderazgo verbal",
+        heroTag: "Curso 01 • 15 Lecciones Prácticas",
+        heroTitle: "Habla con claridad, proyecta autoridad y lidera cualquier sala.",
+        heroDescription: "Domina las articulaciones verbales, la cadencia vocal y las estructuras mentales que distinguen a los grandes líderes en reuniones críticas, negociaciones y gestión de equipos.",
+        heroImage: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80",
+        heroNoteTitle: "Regla de los 30 Segundos",
+        heroNoteText: "“La claridad estructural transmite más autoridad que el volumen de voz.”",
+        metrics: [
+          { value: "4 Módulos", label: "Ruta estructurada" },
+          { value: "15 Prácticas", label: "Casos y ejercicios" },
+          { value: "100% Aplicado", label: "Entorno ejecutivo" }
+        ],
+        pillarsTag: "Arquitectura del Liderazgo Verbal",
+        pillarsTitle: "Los 4 pilares de una comunicación ejecutiva impecable",
+        pillars: [
+          {
+            module: "Módulo 01",
+            title: "Presencia y Autoridad Vocal",
+            desc: "Controla los primeros segundos, elimina muletillas y utiliza pausas estratégicas.",
+            img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Módulo 02",
+            title: "Narrativa y Persuasión",
+            desc: "Convierte datos complejos en decisiones accionables leyendo el lenguaje no verbal.",
+            img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Módulo 03",
+            title: "Límites y Feedback Difícil",
+            desc: "Corrige desvíos en minutos, di 'no' con criterio ejecutivo y redirige reuniones.",
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Módulo 04",
+            title: "Crisis y Escucha de Alto Nivel",
+            desc: "Desactiva tensiones en tiempo real y guía a tus equipos bajo presión operativa.",
+            img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=700&q=80"
+          }
+        ],
+        labTitle: "Articulaciones Verbales: De Reactivo a Líder Estratégico",
+        labCards: [
+          {
+            bad: "“Perdón por molestar, creo que tal vez deberíamos revisar los tiempos porque estamos un poco atrasados.”",
+            good: "“Hagamos un ajuste de prioridad: hoy tenemos un desvío del 15% en tiempos y propongo estas dos acciones para recuperarlo antes del viernes.”"
+          },
+          {
+            bad: "“No puedo tomar ese proyecto ahora, ya tengo demasiadas cosas encima y no llego.”",
+            good: "“Para garantizar el cumplimiento de la entrega actual, hoy no podemos absorber este alcance sin redefinir prioridades. ¿Qué prefieres que pospongamos?”"
+          },
+          {
+            bad: "“Bueno, ya entendimos, pasemos a otra cosa porque nos estamos yendo por las ramas.”",
+            good: "“Excelente punto sobre la operación, Carlos. Para cuidar el tiempo de la sala, lo dejo anotado para verlo aparte y cerramos ahora la decisión presupuestaria.”"
+          }
+        ],
+        lessons: [
+          {
+            id: 1,
+            module: 1,
+            moduleName: "Presencia y Autoridad Vocal",
+            title: "Los primeros 30 segundos de liderazgo",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80",
+            concept: "Antes de presentar datos o propuestas, tu audiencia evalúa calma y dirección. Un líder nunca empieza disculpándose ni justificando el contexto; abre con el propósito claro de la conversación y una pausa de dos segundos.",
+            formula: "Postura erguida + Pausa de 2 seg + Titular ejecutivo en una frase.",
+            exerciseType: "choice",
+            prompt: "Estás por iniciar una reunión crítica con la dirección tras un problema operativo. ¿Cuál es la mejor apertura de 15 segundos?",
+            options: [
+              "Hola a todos, perdón por la demora, tuvimos una mañana muy complicada pero vamos a tratar de ver qué pasó.",
+              "Buenos días. Hoy revisaremos la causa raíz del desvío de ayer y las tres medidas inmediatas que ya están en marcha para estabilizar la operación.",
+              "Bueno, como todos saben hubo un inconveniente bastante grave, así que quería escuchar qué opinan ustedes."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. Vas directo al punto, transmites control emocional y presentas solución desde la primera oración."
+          },
+          {
+            id: 2,
+            module: 1,
+            moduleName: "Presencia y Autoridad Vocal",
+            title: "Articulación y cadencia de alto impacto",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
+            concept: "Hablar rápido diluye tu autoridad; hacer pausas deliberadas después de una idea clave obliga a la sala a procesar tu mensaje. Sustituye las muletillas por silencio consciente y cierra cada frase con entonación descendente.",
+            formula: "Idea clave -> Silencio de 1.5 segundos -> Cierre con tono firme hacia abajo.",
+            exerciseType: "input",
+            prompt: "Reescribe esta frase eliminando inseguridad y muletillas: 'Eh, bueno, creo que quizás deberíamos cambiar el turno de carga mañana, ¿no?'",
+            placeholder: "Escribe tu versión ejecutiva aquí (ej: Mañana adelantaremos el turno de carga a las 06:00 para asegurar...)",
+            minLength: 25,
+            feedback: "¡Muy bien! Al eliminar condicionales ('quizás', 'creo') y cerrar como afirmación, tu instrucción gana claridad inmediata."
+          },
+          {
+            id: 3,
+            module: 1,
+            moduleName: "Presencia y Autoridad Vocal",
+            title: "Mentalidad de certeza bajo presión",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+            concept: "Cuando te cuestionan un indicador o una decisión en público, defenderte a la defensiva debilita tu posición. La certeza ejecutiva consiste en validar el dato objetivo, separar el hecho de la emoción y responder con estructura.",
+            formula: "Reconocer la pregunta + Dato verificable + Próximo paso.",
+            exerciseType: "choice",
+            prompt: "Un gerente cuestiona en voz alta por qué subió un costo este mes. ¿Cómo respondes con autoridad serena?",
+            options: [
+              "No es culpa de mi área, los proveedores subieron todo y nadie nos avisó a tiempo.",
+              "Buena observación. El incremento del 8% responde al flete extraordinario de la semana 2; ya renegociamos la tarifa para normalizarlo el próximo mes.",
+              "La verdad no tengo el detalle exacto aquí, pero seguro no es tan grave como parece."
+            ],
+            correctIndex: 1,
+            feedback: "Excelente. Validas la observación sin ponerte a la defensiva, entregas el dato exacto y muestras acción correctiva."
+          },
+          {
+            id: 4,
+            module: 1,
+            moduleName: "Presencia y Autoridad Vocal",
+            title: "Dominar cualquier sala o auditorio",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80",
+            concept: "Ancla la mirada en una persona por cada idea completa (3 a 4 segundos) en lugar de barrer la sala con los ojos sin enfocar a nadie.",
+            formula: "1 idea completa = 1 interlocutor enfocado.",
+            exerciseType: "choice",
+            prompt: "¿Qué hábito visual proyecta mayor seguridad al hablar frente a un grupo de 15 personas?",
+            options: [
+              "Mirar constantemente las diapositivas o tus notas para no olvidar ningún dato.",
+              "Mover la mirada rápidamente de izquierda a derecha sin detenerte en nadie.",
+              "Sostener contacto visual natural con una persona durante una frase completa y luego cambiar a otro sector de la sala."
+            ],
+            correctIndex: 2,
+            feedback: "Correcto. El contacto visual sostenido por frase genera conexión individual y proyecta dominio del espacio."
+          },
+          {
+            id: 5,
+            module: 2,
+            moduleName: "Narrativa Estratégica y Persuasión",
+            title: "Storytelling ejecutivo con datos",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+            concept: "Utiliza la estructura 'Situación -> Tensión -> Resolución' (STR) para que cualquier reporte técnico se traduzca en una decisión de negocio.",
+            formula: "Situación actual + Impacto si no actuamos + Propuesta concreta.",
+            exerciseType: "input",
+            prompt: "Redacta un micro-relato ejecutivo (STR) para pedir aprobación de una mejora en tu área usando datos o tiempos.",
+            placeholder: "Ej: Hoy procesamos 400 pedidos diarios (Situación), pero el cuello de botella retrasa 45 min la salida (Tensión)...",
+            minLength: 30,
+            feedback: "¡Gran estructura! Has conectado el dato operativo con su impacto real y una solución accionable."
+          },
+          {
+            id: 6,
+            module: 2,
+            moduleName: "Narrativa Estratégica y Persuasión",
+            title: "Lenguaje corporal de influencia",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+            concept: "Mantén las manos visibles por encima de la mesa, utiliza gestos abiertos a la altura del torso para enfatizar puntos clave y evita cruzar brazos.",
+            formula: "Manos visibles + Hombros relajados + Gestos alineados al mensaje.",
+            exerciseType: "choice",
+            prompt: "Durante una negociación tensa, ¿qué postura física comunica apertura y firmeza simultáneamente?",
+            options: [
+              "Inclinarte ligeramente hacia adelante con los antebrazos apoyados y las palmas abiertas al explicar tu propuesta.",
+              "Recostarte hacia atrás con los brazos cruzados para mostrar que no vas a ceder.",
+              "Gesticular rápido cerca del rostro mientras hablas."
+            ],
+            correctIndex: 0,
+            feedback: "Así es. Inclinarte levemente hacia adelante con palmas abiertas denota interés, transparencia y seguridad."
+          },
+          {
+            id: 7,
+            module: 2,
+            moduleName: "Narrativa Estratégica y Persuasión",
+            title: "Lectura rápida de interlocutores",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+            concept: "Adapta tu articulación: los analíticos piden métricas; los directivos piden impacto y velocidad; los operativos piden pasos claros y recursos.",
+            formula: "Identificar prioridad del interlocutor -> Ajustar el nivel de detalle.",
+            exerciseType: "choice",
+            prompt: "Tienes 2 minutos en el pasillo con el Director General para comentarle un proyecto. ¿Qué enfoque eliges?",
+            options: [
+              "Explicarle paso a paso toda la configuración técnica que hiciste durante la semana.",
+              "Presentarle el beneficio en ahorro/eficiencia, el estado actual y qué decisión necesitas de él.",
+              "Contarle todas las dificultades administrativas que tuviste con otros departamentos."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. Un perfil ejecutivo valora el impacto, la síntesis y la claridad sobre qué decisión se requiere."
+          },
+          {
+            id: 8,
+            module: 3,
+            moduleName: "Conversaciones Difíciles y Límites Claros",
+            title: "Feedback directo y accionable en 3 minutos",
+            duration: "16 min",
+            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+            concept: "Evita el 'sándwich' de elogios artificiales. Utiliza el modelo Hecho -> Impacto -> Compromiso para corregir conductas con respeto.",
+            formula: "Cuando ocurre [Hecho observable] -> El impacto es [Consecuencia] -> Necesito que hagamos [Acuerdo].",
+            exerciseType: "input",
+            prompt: "Escribe un feedback de 3 líneas para un colaborador que llega tarde a los cierres de turno, usando Hecho -> Impacto -> Compromiso.",
+            placeholder: "Ej: Juan, esta semana el cierre se entregó 20 min tarde en tres ocasiones (Hecho)...",
+            minLength: 30,
+            feedback: "¡Excelente! Atacas el comportamiento objetivo y su impacto sin descalificar a la persona."
+          },
+          {
+            id: 9,
+            module: 3,
+            moduleName: "Conversaciones Difíciles y Límites Claros",
+            title: "Gestión inteligente de perfiles difíciles",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80",
+            concept: "Ante personas reactivas, nunca iguales su tono emocional. Baja levemente tu ritmo al hablar y lleva la charla al terreno de los hechos.",
+            formula: "Tono calmo + Pregunta de precisión ('¿Qué parte específica necesitamos resolver hoy?').",
+            exerciseType: "choice",
+            prompt: "Un colega dice alterado: 'Siempre cambian las prioridades a última hora y así es imposible trabajar'. ¿Cómo respondes?",
+            options: [
+              "Tú tampoco avisas cuando te atrasas, así que no te quejes ahora.",
+              "Entiendo que el cambio genera presión. Revisemos juntos los dos pedidos urgentes de hoy para definir cuál sale primero.",
+              "Bueno, así son las cosas aquí, hay que adaptarse."
+            ],
+            correctIndex: 1,
+            feedback: "Muy bien. Validas la fricción sin engancharte en la pelea y llevas la conversación a una acción concreta."
+          },
+          {
+            id: 10,
+            module: 3,
+            moduleName: "Conversaciones Difíciles y Límites Claros",
+            title: "Decir 'No' con criterio ejecutivo",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
+            concept: "Decir 'no' con altura profesional significa decir 'sí' a la prioridad estratégica, ofreciendo siempre una alternativa viable.",
+            formula: "Validar el pedido + Explicar el impacto en prioridades + Ofrecer alternativa.",
+            exerciseType: "input",
+            prompt: "Te piden sumar una tarea no planificada hoy a las 16:00 cuando tu equipo cierra el despacho crítico. Redacta tu respuesta ejecutiva.",
+            placeholder: "Ej: Podemos incorporar ese análisis mañana a primera hora para no comprometer el cierre...",
+            minLength: 25,
+            feedback: "¡Impecable! Proteges la operación crítica y ofreces una ventana realista de ejecución."
+          },
+          {
+            id: 11,
+            module: 3,
+            moduleName: "Conversaciones Difíciles y Límites Claros",
+            title: "Interrumpir y redirigir con elegancia",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=900&q=80",
+            concept: "Usa el nombre de la persona, sintetiza brevemente lo que aportó y redirige hacia la decisión pendiente.",
+            formula: "Nombre + Síntesis de 5 palabras + Puente al objetivo.",
+            exerciseType: "choice",
+            prompt: "¿Cuál es la forma más elegante de cortar un monólogo de 10 minutos en una reunión de equipo?",
+            options: [
+              "Perdón que te corte, pero nos estamos quedando sin tiempo y eso no es el tema.",
+              "Gracias, Martín, queda claro el punto sobre los insumos. Para cerrar a tiempo, volvamos ahora al cronograma de entregas.",
+              "Mirar el reloj repetidamente esperando que la persona se dé cuenta sola."
+            ],
+            correctIndex: 1,
+            feedback: "Correcto. Reconoces el aporte con respeto y retomas el timón de la agenda con naturalidad."
+          },
+          {
+            id: 12,
+            module: 4,
+            moduleName: "Negociación, Escucha y Resolución de Crisis",
+            title: "Desactivar tensiones en tiempo real",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80",
+            concept: "Cambia el enfoque de 'quién tuvo la culpa' a 'cómo evitamos que vuelva a pasar'. Nombrar el objetivo común desactiva la postura defensiva.",
+            formula: "Objetivo compartido + Enfoque en el proceso + Acuerdo inmediato.",
+            exerciseType: "choice",
+            prompt: "Dos supervisores discuten frente al equipo sobre quién cometió un error en una planilla. ¿Qué frase desactiva el conflicto?",
+            options: [
+              "Después reviso las cámaras para ver quién se equivocó y aplicar sanción.",
+              "Ambos buscamos que el cliente reciba el pedido sin fallas. Corrijamos ahora esta orden y luego ajustamos el doble control en la planilla.",
+              "Dejen de discutir aquí que dan mal ejemplo."
+            ],
+            correctIndex: 1,
+            feedback: "Excelente. Reenfocas a ambos en el objetivo común, resuelves la urgencia y mejoras el sistema."
+          },
+          {
+            id: 13,
+            module: 4,
+            moduleName: "Negociación, Escucha y Resolución de Crisis",
+            title: "Escucha activa de alto nivel",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=80",
+            concept: "Escuchar como un líder es hacer preguntas que destraban problemas y parafrasear la esencia para confirmar alineación.",
+            formula: "Escuchar sin interrumpir + Parafrasear + Pregunta de avance.",
+            exerciseType: "input",
+            prompt: "Formula una pregunta poderosa para destrabar a un miembro de tu equipo que dice 'no sé cómo resolver este cuello de botella'.",
+            placeholder: "Ej: Si tuvieras todos los recursos disponibles hoy, ¿cuál sería el primer paso que darías para...",
+            minLength: 20,
+            feedback: "¡Gran pregunta! Transfiere protagonismo y activa el pensamiento resolutivo del colaborador."
+          },
+          {
+            id: 14,
+            module: 4,
+            moduleName: "Negociación, Escucha y Resolución de Crisis",
+            title: "Articulación en momentos de crisis",
+            duration: "13 min",
+            image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+            concept: "Comunica en tres bloques: Qué sabemos con certeza, Qué estamos haciendo ahora y Cuándo daremos la próxima actualización.",
+            formula: "Hechos confirmados + Plan en curso + Próximo punto de control.",
+            exerciseType: "choice",
+            prompt: "Hay una caída del sistema central en plena hora pico. ¿Cómo comunicas la situación al equipo operativo?",
+            options: [
+              "No sabemos qué pasó, esperemos a ver si vuelve solo en un rato.",
+              "El sistema está fuera de línea desde las 10:15; TI ya trabaja en el restablecimiento. Mientras tanto operamos con respaldo manual y les actualizo a las 11:00.",
+              "Traten de hacer lo que puedan hasta que se arregle."
+            ],
+            correctIndex: 1,
+            feedback: "Perfecto. Das certeza operativa, protocolo alternativo y un horario concreto de seguimiento."
+          },
+          {
+            id: 15,
+            module: 4,
+            moduleName: "Negociación, Escucha y Resolución de Crisis",
+            title: "Ensayo Final: Plan diario de 5 minutos",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80",
+            concept: "Antes de tu reunión más importante del día, define tu titular de apertura, tus 3 puntos clave y tu llamado a la acción final.",
+            formula: "1 Titular + 3 Argumentos + 1 Cierre accionable.",
+            exerciseType: "input",
+            prompt: "Ensayo de cierre: Redacta tu compromiso personal de liderazgo verbal para tu próxima reunión importante.",
+            placeholder: "Ej: En mi próxima reunión abriré sin disculpas, haré pausas después de cada indicador y cerraré con responsables claros.",
+            minLength: 25,
+            feedback: "¡Felicitaciones! Has completado el Curso 01: Habla con claridad, proyecta autoridad."
+          }
+        ]
+      },
+
+      /* =================================================================
+         CURSO 2: HERRAMIENTA I DO IT (PROGRAMA RECIÉN CREADO)
+         ================================================================= */
+      {
+        id: "idoit",
+        number: "02",
+        shortTitle: "Herramienta I DO IT",
+        subtitle: "Programa de Aplicación de Feedback Estructurado",
+        heroTag: "Curso 02 • Metodología I DO IT",
+        heroTitle: "Domina el modelo I DO IT: convierte el feedback difícil en acuerdos reales.",
+        heroDescription: "Aplica paso a paso las 5 etapas del modelo I DO IT (Intención, Descripción del hecho, Opinión en primera persona, Indagación y Toma de acción) con historias operativas reales, cuestionarios, ejercicios prácticos y ensayo.",
+        heroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80",
+        heroNoteTitle: "Regla de Oro del Paso 2 (Describa el Hecho)",
+        heroNoteText: "“Prosiga sólo si su interlocutor está de acuerdo con el hecho descripto mediante evidencias comprobables.”",
+        metrics: [
+          { value: "5 Etapas", label: "Secuencia I-D-O-I-T" },
+          { value: "2 Historias", label: "Casos reales paso a paso" },
+          { value: "Quiz + Ensayo", label: "Validación completa" }
+        ],
+        pillarsTag: "Estructura Secuencial I DO IT",
+        pillarsTitle: "Los fundamentos de una conversación de retroalimentación sin defensividad",
+        pillars: [
+          {
+            module: "Paso I + D",
+            title: "Intención y Hecho Comprobable",
+            desc: "Declara un motivo de interés mutuo y acuerda el hecho observable antes de emitir cualquier opinión.",
+            img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Paso O",
+            title: "Juicios en Primera Persona",
+            desc: "Expresa tus interpretaciones asumiendo su subjetividad y manteniendo apertura mental.",
+            img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Paso I",
+            title: "Indagación Sincera",
+            desc: "Pregunta con genuina curiosidad para comprender el contexto y la mirada del otro.",
+            img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Paso T",
+            title: "Toma de Acción y Acuerdos",
+            desc: "Re-coordina compromisos concretos y verificables a partir de lo conversado.",
+            img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80"
+          }
+        ],
+        labTitle: "Laboratorio I DO IT: De Acusación Reactiva a Diálogo Constructivo",
+        labCards: [
+          {
+            bad: "“Siempre mandás los reportes tarde y por tu desorganización nos atrasamos todos al día siguiente.”",
+            good: "“Esta semana el parte de novedades ingresó a las 20:30 en lugar de al regreso a base (Hecho). Desde mi lectura, eso nos quita margen para planificar el día siguiente (Juicio).”"
+          },
+          {
+            bad: "“No entiendo por qué armaste primero los pedidos que no urgían, es obvio que había que sacar lo urgente.”",
+            good: "“Hoy a las 11:00 quedaron 14 bultos urgentes sin asignar mientras salieron 3 de mañana (Hecho). ¿Qué criterio usaste en el piso para priorizar así? (Indagación).”"
+          },
+          {
+            bad: "“Bueno, que no vuelva a pasar porque la próxima tomo medidas.”",
+            good: "“Acordemos que ante cualquier demora mayor a 15 minutos enviás aviso por el canal y el viernes revisamos cómo funcionó (Toma de acción).”"
+          }
+        ],
+        lessons: [
+          {
+            id: 1,
+            module: 1,
+            moduleName: "Fundamentos y Casos Reales",
+            title: "Historia Caso A: Desvíos en rutas y reportes operativos",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Dos rutas de reparto acumularon demoras de 45 min en descarga y enviaron el parte de novedades a las 20:30.<br><br><strong>Aplicación I DO IT:</strong><br>• <b>I (Intención):</b> 'Quiero conversar para lograr que las rutas cierren a horario y con info completa, facilitándonos el trabajo a ambos.'<br>• <b>D (Hecho):</b> 'Martes y jueves el GPS marcó +45 min en descarga y el parte llegó 20:30. ¿Coincidimos en esos datos?'<br>• <b>O (Juicio):</b> 'Desde mi perspectiva, cuando el dato llega tarde se pierde previsibilidad. Es mi lectura.'<br>• <b>I (Indagación):</b> '¿Cómo lo viviste vos? ¿Qué pasó en las sucursales que se me escapa?'<br>• <b>T (Acción):</b> 'Avisar demoras >15 min y cerrar reporte antes de salir de última parada. Revisamos el viernes.'",
+            formula: "I (Interés mutuo) -> D (Evidencia acordada) -> O (Subjetividad) -> I (Curiosidad) -> T (Re-coordinación).",
+            exerciseType: "choice",
+            prompt: "En el Caso A, ¿por qué el líder pregunta '¿Coincidimos en esos datos de la planilla y el GPS?' antes de dar su opinión?",
+            options: [
+              "Para demostrar que tiene vigilado al conductor en todo momento.",
+              "Porque la regla del Paso D exige validar que ambos estén de acuerdo en el hecho comprobable antes de avanzar.",
+              "Para ganar tiempo mientras piensa qué sanción aplicar."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. Sin acuerdo previo sobre el hecho objetivo, cualquier juicio posterior dispara una discusión sobre los datos."
+          },
+          {
+            id: 2,
+            module: 1,
+            moduleName: "Fundamentos y Casos Reales",
+            title: "Historia Caso B: Prioridad en armado de cargas",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> En hora pico, un referente priorizó bultos de baja rotación que salían al día siguiente y dejó 14 bultos urgentes sin asignar.<br><br><strong>Aplicación I DO IT:</strong><br>• <b>I:</b> 'Te llamo un minuto para alinear criterios de prioridad y evitar cuellos de botella para ambos.'<br>• <b>D:</b> 'Hoy a las 11:00 quedaron 14 bultos urgentes sin asignar mientras se completaron 3 pedidos de mañana. ¿Ves lo mismo en el tablero?'<br>• <b>O:</b> 'A mí me da la sensación de que se genera tensión innecesaria sobre el cierre. Quiero escuchar tu mirada.'<br>• <b>I:</b> '¿Qué criterio usaste hoy y qué trabas encontraste en el piso?'<br>• <b>T:</b> 'Revisar lista al inicio del turno y avisar si falta reposición antes de cambiar de lote.'",
+            formula: "Separar la intención del colaborador del impacto operativo en el tablero.",
+            exerciseType: "choice",
+            prompt: "¿Cómo formula el líder el Paso O (Otorgue sus juicios) en el Caso B para mantener una actitud abierta?",
+            options: [
+              "'Lo que hiciste hoy demuestra falta de criterio operativo.'",
+              "'A mí me da la sensación de que se genera tensión innecesaria sobre el cierre. Es mi interpretación y quiero escuchar la tuya.'",
+              "'Todo el equipo opina que armaste mal la secuencia de carga.'"
+            ],
+            correctIndex: 1,
+            feedback: "Correcto. Hablar en primera persona ('A mí me da la sensación...', 'Es mi interpretación') reduce la defensividad."
+          },
+          {
+            id: 3,
+            module: 2,
+            moduleName: "Cuestionarios de Opción Múltiple",
+            title: "Quiz 1: Reglas críticas de los pasos I y D",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b42?auto=format&fit=crop&w=900&q=80",
+            concept: "En el primer paso (Indique la intención), el motivo anunciado debe ser de interés para ambas partes, no una amenaza unilateral. En el segundo paso (Describa el hecho), jamás se avanza si no hay evidencias comprobables compartidas.",
+            formula: "Intención compartida + Hecho sin adjetivos = Base sólida.",
+            exerciseType: "choice",
+            prompt: "¿Cuál de estas frases cumple correctamente con el Paso 1 (Indique la intención de la conversación)?",
+            options: [
+              "'Vení a mi oficina porque tenemos que hablar seriamente de tus errores.'",
+              "'Quiero que conversemos 5 minutos para alinear la entrega de indicadores, así vos evitás retrabajos y yo puedo cerrar el tablero a tiempo.'",
+              "'Necesito decirte unas cuantas cosas que no me están gustando.'"
+            ],
+            correctIndex: 1,
+            feedback: "¡Muy bien! Presentas un propósito claro y muestras el beneficio mutuo para ambas partes."
+          },
+          {
+            id: 4,
+            module: 2,
+            moduleName: "Cuestionarios de Opción Múltiple",
+            title: "Quiz 2: Subjetividad, Indagación y Acción (O-I-T)",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+            concept: "El paso O exige reconocer la subjetividad del juicio. El paso I requiere preguntar con actitud sincera de querer comprender. El paso T es una re-coordinación de acciones en función de lo conversado.",
+            formula: "No busques que el otro admita culpa; busca comprender su contexto y re-coordinar.",
+            exerciseType: "choice",
+            prompt: "¿Cuál es el propósito central del cuarto paso ('Indague el punto de vista del otro')?",
+            options: [
+              "Hacer preguntas capciosas para que el interlocutor admita su error.",
+              "Comprender genuinamente la perspectiva, los obstáculos y el contexto de la otra persona.",
+              "Darle un espacio breve para después imponer la solución que ya tenías decidida."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. Indagar con sinceridad permite descubrir causas raíz que quizás no veías desde tu posición."
+          },
+          {
+            id: 5,
+            module: 3,
+            moduleName: "Ejercicios Prácticos",
+            title: "Ejercicio 1: Clasificación Hecho vs. Juicio",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80",
+            concept: "Un error frecuente es disfrazar un juicio como si fuera un hecho ('Llegaste con mala actitud' es juicio; 'Entraste 18 minutos después de las 08:00 y no saludaste al grupo' es hecho).",
+            formula: "Si una cámara de video o un registro puede probarlo sin interpretar -> Es Hecho.",
+            exerciseType: "input",
+            prompt: "Transforma este JUICIO en un HECHO verificable: 'El equipo trabaja de forma muy desprolija cuando cierra el turno.'",
+            placeholder: "Ej: En los últimos 4 cierres de turno quedaron 6 pallets sin etiquetar en el pasillo B y dos planillas sin firma...",
+            minLength: 30,
+            feedback: "¡Excelente conversión! Ahora tienes datos observables que tu interlocutor puede verificar sin sentirse atacado."
+          },
+          {
+            id: 6,
+            module: 3,
+            moduleName: "Ejercicios Prácticos",
+            title: "Ejercicio 2: Guion completo I DO IT de 5 líneas",
+            duration: "18 min",
+            image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80",
+            concept: "Aplica la secuencia completa a una situación real de tu equipo, familia o pares. Verifica que cada letra tenga su frase específica y respete el orden.",
+            formula: "I (Intención) + D (Hecho) + O (Juicio propio) + I (Pregunta abierta) + T (Acuerdo).",
+            exerciseType: "input",
+            prompt: "Redacta un guion real completo aplicando los 5 pasos (I - D - O - I - T) para una conversación que necesites tener esta semana.",
+            placeholder: "I: ... | D: ... | O: ... | I: ... | T: ...",
+            minLength: 60,
+            feedback: "¡Gran trabajo! Tienes un guion estructurado, empático y firme listo para llevar a la práctica."
+          },
+          {
+            id: 7,
+            module: 4,
+            moduleName: "Ensayo de Aplicación",
+            title: "Ensayo: Separar hechos, juicios y acuerdos en el liderazgo",
+            duration: "20 min",
+            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Guía de Ensayo:</strong> Reflexiona sobre por qué validar el hecho con evidencia compartida reduce la defensividad, cómo declarar la subjetividad del juicio abre espacio al diálogo y por qué la eficacia de toda conversación se mide en la re-coordinación de acciones.",
+            formula: "Introducción (Problema habitual) -> Desarrollo (Impacto de D, O e I) -> Cierre (Compromiso y seguimiento).",
+            exerciseType: "input",
+            prompt: "Redacta tu ensayo breve (mínimo 80 caracteres) analizando cómo el modelo I DO IT transforma una conversación tensa en un acuerdo sostenible.",
+            placeholder: "Escribe aquí tu reflexión estructurada sobre la aplicación del modelo I DO IT...",
+            minLength: 80,
+            feedback: "¡Felicitaciones! Has completado todo el Programa de Aplicación de la Herramienta I DO IT."
+          }
+        ]
+      },
+
+      /* =================================================================
+         CURSO 3: CONVERSACIONES DIFÍCILES (DOUGLAS STONE)
+         ================================================================= */
+      {
+        id: "conversaciones-dificiles",
+        number: "03",
+        shortTitle: "Conversaciones difíciles",
+        subtitle: "Basado en Douglas Stone, Bruce Patton y Sheila Heen (Harvard)",
+        heroTag: "Curso 03 • Proyecto Negociación Harvard",
+        heroTitle: "Conversaciones Difíciles: transforma el conflicto en aprendizaje mutuo.",
+        heroDescription: "Basado en la obra clásica de Douglas Stone, descubre la anatomía oculta de toda charla compleja: las tres conversaciones (Qué pasó, Sentimientos e Identidad) y cómo pasar de la certeza a la curiosidad.",
+        heroImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
+        heroNoteTitle: "Principio Central de Douglas Stone",
+        heroNoteText: "“No intentes convencer al otro de que tienes razón; explora cómo ambos ven el problema de manera diferente.”",
+        metrics: [
+          { value: "3 Capas", label: "Anatomía del conflicto" },
+          { value: "Casos Reales", label: "Historias y resolución" },
+          { value: "Quiz + Ensayo", label: "Práctica reflexiva" }
+        ],
+        pillarsTag: "Modelo del Proyecto de Negociación de Harvard",
+        pillarsTitle: "Las 4 claves para desarmar cualquier conversación difícil",
+        pillars: [
+          {
+            module: "Clave 01",
+            title: "Las Tres Conversaciones",
+            desc: "Distingue entre lo que pasó (hechos/intenciones), los sentimientos no expresados y la identidad en juego.",
+            img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Clave 02",
+            title: "De Culpa a Contribución",
+            desc: "Abandona la búsqueda de culpables y analiza cómo ambos contribuyeron al sistema del problema.",
+            img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Clave 03",
+            title: "La Tercera Historia",
+            desc: "Inicia la charla como un observador imparcial que integra ambas perspectivas sin juzgar.",
+            img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Clave 04",
+            title: "Escucha y Postura de Aprendizaje",
+            desc: "Cambia el objetivo de 'ganar el debate' a 'comprender qué información tiene el otro que yo no veo'.",
+            img: "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=700&q=80"
+          }
+        ],
+        labTitle: "Laboratorio Douglas Stone: De Batalla de Verdades a Tercera Historia",
+        labCards: [
+          {
+            bad: "“Vos hiciste esto a propósito para dejarme mal frente a la gerencia.” (Asumir intención)",
+            good: "“Cuando se presentó el informe sin mi revisión previa, me sentí desplazado. Quiero entender qué te llevó a enviarlo así.” (Impacto vs. Intención)"
+          },
+          {
+            bad: "“El problema es 100% tuyo porque no seguiste el procedimiento.” (Culpa)",
+            good: "“Veo que hubo falta de seguimiento en el cierre y también noto que yo no dejé claro quién validaba el último paso. ¿Cómo lo ordenamos?” (Contribución)"
+          },
+          {
+            bad: "“Tengo que hablar contigo porque estás equivocado en cómo manejás al equipo.” (Apertura hostil)",
+            good: "“Noto que tenemos miradas distintas sobre cómo distribuir la carga del turno y eso está generando desgaste. Me gustaría entender tu punto de vista.” (Tercera Historia)"
+          }
+        ],
+        lessons: [
+          {
+            id: 1,
+            module: 1,
+            moduleName: "Anatomía del Conflicto",
+            title: "Historia Caso 1: La trampa de asumir intenciones",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Un jefe de operaciones descubre que un par cambió el horario de salida de un camión sin consultarle. Su primera reacción es pensar: <em>'Quiere pasar por encima de mi autoridad'</em>.<br><br><strong>Aplicación Douglas Stone:</strong> El libro enseña que las intenciones son invisibles; solo conocemos el impacto que una acción tuvo en nosotros. Al separar impacto de intención, el jefe abrió diciendo: <em>'Cuando vi el cambio de horario sin aviso previo, sentí que perdíamos coordinación y me preocupó el impacto en la sucursal. ¿Qué te llevó a tomar esa decisión?'</em> Descubrió que el par intentó evitar un corte de ruta por manifestación y no tuvo señal para llamar.",
+            formula: "Nunca acuses por la intención supuesta -> Describe la acción + El impacto en ti + Pregunta abierta.",
+            exerciseType: "choice",
+            prompt: "Según Douglas Stone, ¿por qué es un error grave afirmar 'Lo hiciste para perjudicarme'?",
+            options: [
+              "Porque las intenciones viven dentro de la mente del otro; al deducirlas desde el dolor propio solemos equivocarnos y activar su defensa.",
+              "Porque es mejor guardar silencio y no mencionar nunca el problema.",
+              "Porque primero hay que reunir testigos."
+            ],
+            correctIndex: 0,
+            feedback: "Exacto. Separar el impacto real que sufriste de la intención que imaginas desactiva inmediatamente la escalada."
+          },
+          {
+            id: 2,
+            module: 1,
+            moduleName: "Anatomía del Conflicto",
+            title: "Historia Caso 2: De buscar culpables a analizar contribución",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Un proyecto de automatización se retrasó tres semanas. IT culpa a Operaciones por cambiar requisitos y Operaciones culpa a IT por no entender el negocio.<br><br><strong>Aplicación Douglas Stone:</strong> Buscar culpables mira hacia el pasado y paraliza. Analizar el <em>sistema de contribución</em> pregunta: <em>'¿Qué hice o dejé de hacer yo que facilitó este problema?'</em> Ambos reconocieron que evitaron reuniones semanales de revisión por falta de tiempo, logrando rediseñar el flujo de trabajo.",
+            formula: "Culpa = Juzgar el pasado | Contribución = Entender cómo ambos creamos el presente para cambiar el futuro.",
+            exerciseType: "choice",
+            prompt: "¿Cuál es la diferencia fundamental entre 'culpa' y 'contribución' en Conversaciones Difíciles?",
+            options: [
+              "La contribución significa aceptar que todo fue culpa tuya para evitar pelear.",
+              "La culpa busca castigar a un responsable único; la contribución identifica qué aportó cada parte (por acción u omisión) al resultado.",
+              "No hay diferencia práctica entre ambos conceptos."
+            ],
+            correctIndex: 1,
+            feedback: "Correcto. Reconocer tu cuota de contribución invita al otro a reconocer la suya sin humillación."
+          },
+          {
+            id: 3,
+            module: 2,
+            moduleName: "Cuestionarios y Diagnóstico",
+            title: "Quiz: Las Tres Conversaciones y la Identidad",
+            duration: "12 min",
+            image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+            concept: "Toda conversación difícil tiene tres niveles: 1) La conversación del 'Qué pasó', 2) La conversación de los Sentimientos, y 3) La conversación de la Identidad ('¿Soy competente?', '¿Soy buena persona?', '¿Soy digno de respeto?'). Cuando nuestra identidad tiembla, perdemos el equilibrio.",
+            formula: "Identidad estable = 'Puedo cometer errores y seguir siendo un profesional competente'.",
+            exerciseType: "choice",
+            prompt: "¿Qué ocurre cuando en una charla difícil se activa la 'Conversación de la Identidad'?",
+            options: [
+              "Sentimos amenazada nuestra autoimagen (competencia o integridad) y reaccionamos negando todo o contraatacando.",
+              "La conversación se vuelve automáticamente más lógica y rápida.",
+              "Los sentimientos desaparecen por completo."
+            ],
+            correctIndex: 0,
+            feedback: "Muy bien. Reconocer qué fibra de tu identidad está tocando el conflicto te devuelve la calma."
+          },
+          {
+            id: 4,
+            module: 3,
+            moduleName: "Ejercicios Prácticos",
+            title: "Ejercicio Práctico: Redactar la Tercera Historia",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+            concept: "La 'Tercera Historia' es cómo describiría el desacuerdo un mediador imparcial que respeta a ambas partes. Nunca empieza con 'El problema sos vos', sino describiendo la brecha entre dos miradas legítimas.",
+            formula: "'Veo que tenemos perspectivas diferentes sobre [Tema] y quiero entender tu mirada para encontrar una salida juntos.'",
+            exerciseType: "input",
+            prompt: "Escribe una apertura de 'Tercera Historia' para iniciar una conversación con un compañero o jefe con quien tienes un desacuerdo recurrente.",
+            placeholder: "Ej: Noto que estamos viendo de forma distinta la prioridad de los despachos de la tarde y eso nos genera tensión. Me gustaría escuchar cómo lo ves vos...",
+            minLength: 35,
+            feedback: "¡Excelente apertura! Invitas al diálogo desde la igualdad y la curiosidad genuina."
+          },
+          {
+            id: 5,
+            module: 4,
+            moduleName: "Ensayo de Aplicación",
+            title: "Ensayo: De la Postura de Certeza a la Postura de Aprendizaje",
+            duration: "20 min",
+            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Guía de Ensayo:</strong> Douglas Stone sostiene que entramos a las discusiones creyendo 'Yo tengo los datos, el otro está ciego'. Desarrolla cómo cambia una relación laboral o personal cuando reemplazamos la necesidad de tener razón por tres preguntas de curiosidad.",
+            formula: "Certeza ('Yo sé') -> Curiosidad ('¿Qué sabe el otro que yo no veo?').",
+            exerciseType: "input",
+            prompt: "Redacta un ensayo breve (mínimo 80 caracteres) explicando cómo aplicarías las Tres Conversaciones y la Tercera Historia en un conflicto real.",
+            placeholder: "Escribe tu ensayo analizando impacto vs. intención, contribución y postura de aprendizaje...",
+            minLength: 80,
+            feedback: "¡Excelente análisis! Has dominado las herramientas centrales de Conversaciones Difíciles."
+          }
+        ]
+      },
+
+      /* =================================================================
+         CURSO 4: PREPARAR UNA ENTREVISTA DE TRABAJO (MATHILDE RAMADIER)
+         ================================================================= */
+      {
+        id: "entrevista-trabajo",
+        number: "04",
+        shortTitle: "Preparar una entrevista de trabajo",
+        subtitle: "Inspirado en '¡Te llamaremos…!' de Mathilde Ramadier",
+        heroTag: "Curso 04 • Estrategia de Selección y Carrera",
+        heroTitle: "¡Te llamaremos…! Domina la entrevista con autenticidad y estrategia.",
+        heroDescription: "Basado en el enfoque lúcido y desmitificador de Mathilde Ramadier, aprende a decodificar los códigos ocultos de los reclutadores, transformar tus debilidades en criterio profesional y negociar tu valor sin perder tu esencia.",
+        heroImage: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=80",
+        heroNoteTitle: "Claves de '¡Te llamaremos…!'",
+        heroNoteText: "“Una entrevista no es un examen escolar donde buscas aprobar; es una evaluación mutua entre dos adultos profesionales.”",
+        metrics: [
+          { value: "4 Fases", label: "Antes, durante y cierre" },
+          { value: "Casos Reales", label: "Preguntas trampa resueltas" },
+          { value: "Pitch + Ensayo", label: "Tu narrativa de valor" }
+        ],
+        pillarsTag: "Claves del Libro '¡Te llamaremos…!'",
+        pillarsTitle: "Los 4 pilares para destacar sin actuar un personaje",
+        pillars: [
+          {
+            module: "Fase 01",
+            title: "Decodificar al Reclutador",
+            desc: "Comprende qué necesidad real busca resolver la empresa detrás de la descripción del puesto.",
+            img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Fase 02",
+            title: "Relato Profesional Coherente",
+            desc: "Conecta tus experiencias previas con resultados medibles y sentido de dirección.",
+            img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Fase 03",
+            title: "Preguntas Trampa y Fracasos",
+            desc: "Responde sobre defectos, brechas o salidas anteriores con honestidad madura y aprendizaje.",
+            img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Fase 04",
+            title: "El Arte de Preguntar y Cerrar",
+            desc: "Evalúa tú también a la empresa con preguntas incisivas que demuestran nivel ejecutivo.",
+            img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80"
+          }
+        ],
+        labTitle: "Laboratorio de Entrevista: De Respuesta Cliché a Candidato Memorable",
+        labCards: [
+          {
+            bad: "“Mi mayor defecto es que soy demasiado perfeccionista y trabajo demasiado.” (Cliché desconfiable)",
+            good: "“Tiendo a involucrarme mucho en el detalle operativo; aprendí a delegar con tableros de control claros para no convertirme en cuello de botella.” (Madurez real)"
+          },
+          {
+            bad: "“Me fui de mi anterior empresa porque mi jefe era un desastre y no valoraba nada.” (Bandera roja)",
+            good: "“Cumplí un ciclo de 3 años logrando optimizar la distribución; hoy busco un desafío de mayor escala donde aportar esa experiencia.” (Foco en evolución)"
+          },
+          {
+            bad: "“No tengo ninguna pregunta, me quedó todo súper claro.” (Pasividad)",
+            good: "“¿Cuál es el principal cuello de botella que esperan que resuelva la persona que ocupe este rol en sus primeros 90 días?” (Visión estratégica)"
+          }
+        ],
+        lessons: [
+          {
+            id: 1,
+            module: 1,
+            moduleName: "Preparación e Investigación",
+            title: "Historia Caso 1: Del CV genérico al diagnóstico de necesidad",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Un candidato con excelente trayectoria técnica fue descartado tras decir <em>'Me interesa el puesto porque es una empresa líder y quiero crecer'</em>. Otro candidato con menos años investigó los desafíos logísticos recientes de la compañía y abrió explicando cómo resolvió un problema idéntico.<br><br><strong>Lección de Mathilde Ramadier:</strong> No recites tu currículum cronológicamente; traduce tu historia en soluciones para los dolores actuales de quien te entrevista.",
+            formula: "Contexto de la empresa + Tu logro comparable + Valor que traes desde el día 1.",
+            exerciseType: "choice",
+            prompt: "Según el enfoque de '¡Te llamaremos…!', ¿cuál es el mejor enfoque al responder 'Háblame de ti'?",
+            options: [
+              "Contar desde el colegio hasta cada tarea rutinaria que hiciste en tus últimos cinco trabajos.",
+              "Presentar un hilo conductor de 90 segundos que conecte tus logros clave con los desafíos específicos de la posición.",
+              "Leer en voz alta el resumen de tu currículum."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. El reclutador ya leyó tu CV; quiere escuchar cómo conectas tus capacidades con lo que su equipo necesita hoy."
+          },
+          {
+            id: 2,
+            module: 1,
+            moduleName: "Preparación e Investigación",
+            title: "Historia Caso 2: Desarmar las preguntas sobre defectos y fracasos",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Ante la pregunta <em>'¿Cuál fue tu mayor error profesional?'</em>, una candidata intentó demostrar que nunca se equivocaba. El entrevistador percibió rigidez y falta de autocrítica.<br><br><strong>Lección de Mathilde Ramadier:</strong> Los reclutadores no buscan perfección, buscan capacidad de aprendizaje y autoconocimiento. Exponer un error real, asumir responsabilidad sin victimismo y mostrar el sistema que creaste para que no se repita genera alta credibilidad.",
+            formula: "Error real (no fatal) + Responsabilidad propia + Mecanismo de mejora implementado.",
+            exerciseType: "choice",
+            prompt: "¿Qué evalúa realmente un entrevistador cuando pregunta por tus puntos débiles o errores?",
+            options: [
+              "Busca una excusa rápida para eliminarte del proceso.",
+              "Evalúa tu nivel de autoconocimiento, honestidad y capacidad de corregir hábitos.",
+              "Espera escuchar la frase 'soy demasiado exigente conmigo mismo'."
+            ],
+            correctIndex: 1,
+            feedback: "Correcto. La honestidad estructurada proyecta mucha más seguridad que el maquillaje corporativo."
+          },
+          {
+            id: 3,
+            module: 2,
+            moduleName: "Cuestionario de Selección",
+            title: "Quiz: Códigos ocultos y comunicación en la sala",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80",
+            concept: "Mathilde Ramadier destaca que el proceso de selección tiene rituales implícitos: puntualidad, congruencia entre lo que dices y cómo te mueves, y la capacidad de mantener una conversación horizontal en lugar de una postura sumisa.",
+            formula: "Horizontalidad profesional: Ellos ofrecen un proyecto; tú ofreces talento y resultados.",
+            exerciseType: "choice",
+            prompt: "Al final de la entrevista te dicen '¿Tienes alguna pregunta para nosotros?'. ¿Qué demuestra mayor criterio?",
+            options: [
+              "Preguntar inmediatamente cuántos días de vacaciones extras dan y a qué hora se sale los viernes.",
+              "Preguntar sobre los indicadores de éxito del puesto a 6 meses, la dinámica del equipo y los retos inmediatos del área.",
+              "Decir 'No, ya me explicaron todo perfectamente'."
+            ],
+            correctIndex: 1,
+            feedback: "¡Muy bien! Demuestras que piensas en resultados, adaptación cultural y aporte de valor."
+          },
+          {
+            id: 4,
+            module: 3,
+            moduleName: "Ejercicios Prácticos",
+            title: "Ejercicio Práctico: Tu Pitch de 60 Segundos + Método STAR",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+            concept: "Prepara un logro concreto usando <strong>STAR</strong> (Situación, Tarea, Acción que tomaste tú, Resultado cuantificable) combinado con tu presentación ejecutiva.",
+            formula: "Quién soy + Mi especialidad + 1 Logro medible con impacto real.",
+            exerciseType: "input",
+            prompt: "Redacta tu respuesta de 4-5 líneas para '¿Por qué deberíamos elegirte para liderar esta área?' incluyendo un logro concreto.",
+            placeholder: "Ej: Cuento con más de 10 años liderando operaciones logísticas y flotas. En mi último rol reduje un 18% los tiempos de despacho...",
+            minLength: 40,
+            feedback: "¡Excelente pitch! Claro, concreto y respaldado por evidencia real."
+          },
+          {
+            id: 5,
+            module: 4,
+            moduleName: "Ensayo de Aplicación",
+            title: "Ensayo: La entrevista como elección mutua",
+            duration: "20 min",
+            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Guía de Ensayo:</strong> Reflexiona sobre el mensaje central de <em>'¡Te llamaremos…!'</em>: dejar de mendigar aprobación en las entrevistas para evaluar si la cultura, el liderazgo y el desafío del puesto realmente encajan con tus valores y objetivos.",
+            formula: "Autoconocimiento + Preparación estratégica + Dignidad profesional.",
+            exerciseType: "input",
+            prompt: "Redacta un ensayo breve (mínimo 80 caracteres) sobre cómo preparar una entrevista manteniendo autenticidad y criterio propio.",
+            placeholder: "Escribe tu reflexión sobre cómo equilibrar la estrategia frente al reclutador con tus propios criterios de selección...",
+            minLength: 80,
+            feedback: "¡Felicitaciones! Has completado el programa de preparación de entrevistas."
+          }
+        ]
+      },
+
+      /* =================================================================
+         CURSO 5: CÓMO HABLAR EN PÚBLICO (DALE CARNEGIE)
+         ================================================================= */
+      {
+        id: "hablar-en-publico",
+        number: "05",
+        shortTitle: "Cómo hablar en público",
+        subtitle: "Basado en las obras clásicas de Dale Carnegie",
+        heroTag: "Curso 05 • Método Dale Carnegie",
+        heroTitle: "Cómo hablar en público e influir en los hombres de negocios.",
+        heroDescription: "Domina los principios atemporales de Dale Carnegie: transforma el miedo escénico en entusiasmo, habla desde tu experiencia vivida, estructura discursos memorables y conecta emocionalmente con cualquier auditorio.",
+        heroImage: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80",
+        heroNoteTitle: "Máxima de Dale Carnegie",
+        heroNoteText: "“Solo el orador preparado merece tener confianza; la convicción nace de haber vivido y sentido aquello de lo que hablas.”",
+        metrics: [
+          { value: "4 Pilares", label: "Método Dale Carnegie" },
+          { value: "Casos Reales", label: "De nervios a ovación" },
+          { value: "Discurso + Ensayo", label: "Práctica oratoria" }
+        ],
+        pillarsTag: "Principios de Oratoria de Dale Carnegie",
+        pillarsTitle: "Los 4 fundamentos para conquistar cualquier audiencia",
+        pillars: [
+          {
+            module: "Principio 01",
+            title: "Valor y Confianza en Uno Mismo",
+            desc: "Sustituye el miedo escénico preparando ideas profundas, no memorizando palabras sueltas.",
+            img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Principio 02",
+            title: "Ganar el Derecho a Hablar",
+            desc: "Habla de temas que hayas vivido, estudiado o sentido con intensidad genuina.",
+            img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Principio 03",
+            title: "Fórmula Mágica de Carnegie",
+            desc: "Estructura cada intervención con: Incidente vivido -> Punto clave -> Beneficio para el público.",
+            img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80"
+          },
+          {
+            module: "Principio 04",
+            title: "Entusiasmo y Conexión Humana",
+            desc: "Conversa con el público como si hablaras con un amigo, usando ejemplos concretos e ilustraciones.",
+            img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=700&q=80"
+          }
+        ],
+        labTitle: "Laboratorio Dale Carnegie: De Discurso Monótono a Mensaje Inolvidable",
+        labCards: [
+          {
+            bad: "“Hoy vengo a leerles 20 diapositivas sobre la importancia teórica de la seguridad operativa.” (Abstracción fría)",
+            good: "“El martes pasado a las 07:15, un simple chequeo de frenos de 3 minutos evitó un incidente grave en ruta. De eso quiero hablarles hoy.” (Incidente real)"
+          },
+          {
+            bad: "“Perdonen si me trabo, es que no soy buen orador y me pone nervioso hablar en público.” (Auto-sabotaje)",
+            good: "*(Respirar hondo, sonreír, mirar a tres personas y comenzar directo con una pregunta o historia).* (Presencia segura)"
+          },
+          {
+            bad: "“Bueno, eso era todo lo que tenía para decir, muchas gracias.” (Cierre débil)",
+            good: "“Si aplicamos este único hábito desde mañana a las 08:00, ahorraremos 40 minutos diarios. ¿Quién empieza hoy mismo?” (Llamado a la acción)"
+          }
+        ],
+        lessons: [
+          {
+            id: 1,
+            module: 1,
+            moduleName: "Confianza y Preparación",
+            title: "Historia Caso 1: El ejecutivo que dejó de memorizar discursos",
+            duration: "14 min",
+            image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> Un gerente comercial escribía sus discursos palabra por palabra y los memorizaba. En una convención olvidó una frase en el minuto dos, quedó en blanco y terminó leyendo nervioso.<br><br><strong>Enseñanza de Dale Carnegie:</strong> Nunca memorices un texto como un actor; domina tus <strong>ideas clave</strong> en secuencia y deja que las palabras nazcan naturalmente en el momento, como cuando le cuentas algo apasionante a un amigo.",
+            formula: "No memorices palabras -> Ordena 3 ideas fuerza + Ejemplos reales.",
+            exerciseType: "choice",
+            prompt: "Según Dale Carnegie, ¿cuál es la verdadera forma de preparar un discurso para vencer el miedo escénico?",
+            options: [
+              "Escribirlo completo y repetirlo de memoria hasta no cambiar ni una coma.",
+              "Reflexionar profundamente sobre el tema, ordenar 3 o 4 ideas centrales con ejemplos vividos y practicar explicándolo con naturalidad.",
+              "Improvisar todo en el momento sin preparar nada para sonar espontáneo."
+            ],
+            correctIndex: 1,
+            feedback: "Exacto. Cuando dominas las ideas y ejemplos, nunca te quedas en blanco porque no dependes de recordar una palabra exacta."
+          },
+          {
+            id: 2,
+            module: 1,
+            moduleName: "Confianza y Preparación",
+            title: "Historia Caso 2: La Fórmula Mágica (Incidente -> Punto -> Beneficio)",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Historia de situación:</strong> En una charla sobre trabajo en equipo, los primeros expositores aburrieron con definiciones de diccionario. El último orador contó una anécdota de 40 segundos sobre una entrega nocturna bajo lluvia, extrajo una lección clara y pidió al público aplicarla.<br><br><strong>Fórmula Mágica de Carnegie:</strong><br>1. <b>Incidente:</b> Comienza con una experiencia concreta.<br>2. <b>Punto:</b> Enuncia en una frase qué acción quieres que tome el público.<br>3. <b>Beneficio:</b> Explica qué ganan ellos si lo hacen.",
+            formula: "1. Historia breve (Qué pasó) -> 2. Acción sugerida -> 3. Razón/Beneficio para la audiencia.",
+            exerciseType: "choice",
+            prompt: "¿Cuál es el orden correcto de la 'Fórmula Mágica' de Dale Carnegie para charlas breves de alto impacto?",
+            options: [
+              "Teoría general -> Estadísticas largas -> Disculpa final.",
+              "Incidente o historia concreta -> Punto clave (acción) -> Beneficio para el oyente.",
+              "Saludo protocolar -> Lectura de índice -> Conclusión abstracta."
+            ],
+            correctIndex: 1,
+            feedback: "Correcto. Las historias capturan la atención humana al instante; el punto y el beneficio mueven a la acción."
+          },
+          {
+            id: 3,
+            module: 2,
+            moduleName: "Cuestionario de Oratoria",
+            title: "Quiz: Conexión emocional, entusiasmo y cierre",
+            duration: "10 min",
+            image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80",
+            concept: "Carnegie afirma que el entusiasmo es más contagioso que cualquier argumento técnico. Además, nunca se debe abrir disculpándose ('No tuve tiempo de preparar esto') ni cerrar diciendo 'Bueno, eso es todo'.",
+            formula: "Abre con impacto (historia/pregunta) y cierra con un llamado claro a la acción.",
+            exerciseType: "choice",
+            prompt: "¿Qué hábito recomienda evitar estrictamente Dale Carnegie al comenzar una presentación?",
+            options: [
+              "Hacer una pausa breve y mirar al público antes de hablar.",
+              "Comenzar pidiendo disculpas ('Perdón, no preparé mucho esta charla' o 'No soy experto').",
+              "Arrancar directamente con un ejemplo concreto."
+            ],
+            correctIndex: 1,
+            feedback: "¡Muy bien! Pedir disculpas al inicio predispone al público a pensar que les vas a hacer perder el tiempo."
+          },
+          {
+            id: 4,
+            module: 3,
+            moduleName: "Ejercicios Prácticos",
+            title: "Ejercicio Práctico: Construye tu charla con la Fórmula Mágica",
+            duration: "15 min",
+            image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+            concept: "Elige una enseñanza que hayas aprendido en tu trabajo o vida personal y estructúrala en tres bloques breves siguiendo a Dale Carnegie.",
+            formula: "Incidente (2 líneas) + Punto/Acción (1 línea) + Beneficio para tu equipo/público (1 línea).",
+            exerciseType: "input",
+            prompt: "Redacta un mini-discurso motivacional o operativo usando: 1) Incidente vivido, 2) Acción concreta, 3) Beneficio para el público.",
+            placeholder: "Ej: (Incidente) Hace un mes perdimos dos horas buscando una falla simple... (Punto) Por eso propongo dedicar 5 min al checklist previo... (Beneficio) Así saldremos a tiempo todos los días.",
+            minLength: 45,
+            feedback: "¡Magnífico! Tu mensaje tiene emoción, claridad y un propósito tangible para quien te escucha."
+          },
+          {
+            id: 5,
+            module: 4,
+            moduleName: "Ensayo de Aplicación",
+            title: "Ensayo: Hablar desde la convicción y la experiencia vivida",
+            duration: "20 min",
+            image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80",
+            concept: "<strong>Guía de Ensayo:</strong> Dale Carnegie enseña que el mejor orador no es el que usa palabras más rebuscadas, sino el que siente urgencia genuina por compartir algo útil con su audiencia. Reflexiona sobre cómo transformar los nervios en energía comunicativa.",
+            formula: "Foco en servir al público > Foco en cómo me veo yo.",
+            exerciseType: "input",
+            prompt: "Redacta un ensayo breve (mínimo 80 caracteres) analizando cómo los principios de Dale Carnegie ayudan a liderar equipos y vencer el temor a hablar en público.",
+            placeholder: "Escribe tu ensayo integrando preparación por ideas, uso de historias reales y entusiasmo genuino...",
+            minLength: 80,
+            feedback: "¡Felicitaciones! Has completado los 5 programas de la Academia Voz de Mando."
+          }
+        ]
+      }
+    ];
+
+    /* =================================================================
+       ESTADO Y PERSISTENCIA EN LOCALSTORAGE
+       ================================================================= */
+    const STORAGE_KEY = "voz_de_mando_academy_v2";
+    let academyProgress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    let activeCourseId = coursesDatabase[0].id;
+    let activeLessonId = 1;
+    let activeModuleFilter = "all";
+
+    function getCompletedForCourse(courseId) {
+      return academyProgress[courseId] || [];
+    }
+
+    function saveAcademyProgress() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(academyProgress));
+      renderLeftMenu();
+      updateHeaderProgress();
+    }
+
+    /* =================================================================
+       RENDERIZADO DEL MENÚ LATERAL IZQUIERDO DE CURSOS
+       ================================================================= */
+    function renderLeftMenu() {
+      const navListEl = document.getElementById("course-nav-list");
+      let totalLessonsAllCourses = 0;
+      let totalCompletedAllCourses = 0;
+
+      navListEl.innerHTML = coursesDatabase.map(course => {
+        const completed = getCompletedForCourse(course.id);
+        const total = course.lessons.length;
+        const pct = Math.round((completed.length / total) * 100);
+        const isActive = course.id === activeCourseId;
+
+        totalLessonsAllCourses += total;
+        totalCompletedAllCourses += completed.length;
+
+        return `
+          <button
+            type="button"
+            class="course-nav-item ${isActive ? "active" : ""}"
+            onclick="selectCourse('${course.id}')"
+          >
+            <div class="course-nav-top">
+              <span class="course-num-badge">${course.number}</span>
+              <span class="course-pct-pill">${pct}%</span>
+            </div>
+            <strong class="course-nav-title">${course.shortTitle}</strong>
+            <small class="course-nav-sub">${course.subtitle}</small>
+            <div class="mini-progress-track">
+              <div class="mini-progress-fill" style="width: ${pct}%"></div>
+            </div>
+          </button>
+        `;
+      }).join("");
+
+      const globalPct = Math.round((totalCompletedAllCourses / totalLessonsAllCourses) * 100);
+      document.getElementById("academy-total-text").textContent = `${globalPct}% (${totalCompletedAllCourses}/${totalLessonsAllCourses})`;
+      document.getElementById("academy-total-bar").style.width = `${globalPct}%`;
+    }
+
+    /* =================================================================
+       ACTUALIZAR CABECERA Y SECCIONES DEL CURSO ACTIVO
+       ================================================================= */
+    function updateHeaderProgress() {
+      const course = coursesDatabase.find(c => c.id === activeCourseId);
+      const courseIndex = coursesDatabase.findIndex(c => c.id === activeCourseId) + 1;
+      const completed = getCompletedForCourse(course.id);
+      const total = course.lessons.length;
+      const pct = Math.round((completed.length / total) * 100);
+
+      document.getElementById("header-course-badge").textContent = `Curso ${courseIndex} de ${coursesDatabase.length}`;
+      document.getElementById("header-course-title").textContent = course.shortTitle;
+      document.getElementById("global-progress-text").textContent = `${pct}% (${completed.length}/${total})`;
+      document.getElementById("global-progress-bar").style.width = `${pct}%`;
+    }
+
+    function renderCourseSections() {
+      const course = coursesDatabase.find(c => c.id === activeCourseId);
+
+      // Hero
+      document.getElementById("hero-tag").textContent = course.heroTag;
+      document.getElementById("hero-title").textContent = course.heroTitle;
+      document.getElementById("hero-description").textContent = course.heroDescription;
+      document.getElementById("hero-image").src = course.heroImage;
+      document.getElementById("hero-note-title").textContent = course.heroNoteTitle;
+      document.getElementById("hero-note-text").textContent = course.heroNoteText;
+
+      document.getElementById("hero-metrics").innerHTML = course.metrics.map(m => `
+        <div class="metric-item">
+          <strong>${m.value}</strong>
+          <span>${m.label}</span>
+        </div>
+      `).join("");
+
+      // Pilares
+      document.getElementById("pillars-tag").textContent = course.pillarsTag;
+      document.getElementById("pillars-title").textContent = course.pillarsTitle;
+      document.getElementById("pillars-grid").innerHTML = course.pillars.map(p => `
+        <article class="glass-card pillar-card">
+          <img src="${p.img}" alt="${p.title}" class="pillar-img" />
+          <div class="pillar-body">
+            <span class="module-num">${p.module}</span>
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+          </div>
+        </article>
+      `).join("");
+
+      // Laboratorio
+      document.getElementById("lab-title").textContent = course.labTitle;
+      document.getElementById("lab-grid").innerHTML = course.labCards.map(card => `
+        <div class="glass-card lab-card">
+          <span class="badge-bad">Evitar (Enfoque reactivo)</span>
+          <p class="phrase-old">${card.bad}</p>
+          <div class="divider"></div>
+          <span class="badge-good">Usar (Enfoque estratégico)</span>
+          <p class="phrase-new">${card.good}</p>
+        </div>
+      `).join("");
+
+      // Pestañas de módulos en Aula Interactiva
+      const uniqueModules = [...new Map(course.lessons.map(l => [l.module, l.moduleName])).entries()];
+      const tabsEl = document.getElementById("module-tabs");
+      tabsEl.innerHTML = `
+        <button class="tab-btn ${activeModuleFilter === "all" ? "active" : ""}" onclick="filterModules('all')">
+          Todas (${course.lessons.length})
+        </button>
+        ${uniqueModules.map(([modNum, modName]) => `
+          <button class="tab-btn ${activeModuleFilter === String(modNum) ? "active" : ""}" onclick="filterModules('${modNum}')">
+            Módulo ${modNum}: ${modName}
+          </button>
+        `).join("")}
+      `;
+
+      renderLessonsList();
+      renderLessonStage();
+    }
+
+    function renderLessonsList() {
+      const course = coursesDatabase.find(c => c.id === activeCourseId);
+      const completed = getCompletedForCourse(course.id);
+      const filtered = activeModuleFilter === "all"
+        ? course.lessons
+        : course.lessons.filter(l => String(l.module) === activeModuleFilter);
+
+      document.getElementById("lesson-list").innerHTML = filtered.map(lesson => {
+        const isCompleted = completed.includes(lesson.id);
+        const isActive = lesson.id === activeLessonId;
+        return `
+          <button class="lesson-item ${isActive ? "active" : ""} ${isCompleted ? "completed" : ""}" onclick="selectLesson(${lesson.id})">
+            <span class="lesson-status-icon">${isCompleted ? "✓" : lesson.id}</span>
+            <div class="lesson-item-text">
+              <small>Unidad ${lesson.module} • ${lesson.duration}</small>
+              <strong>${lesson.title}</strong>
+            </div>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderLessonStage() {
+      const course = coursesDatabase.find(c => c.id === activeCourseId);
+      const lesson = course.lessons.find(l => l.id === activeLessonId) || course.lessons[0];
+      activeLessonId = lesson.id;
+      const completed = getCompletedForCourse(course.id);
+      const isCompleted = completed.includes(lesson.id);
+
+      let exerciseHTML = "";
+      if (lesson.exerciseType === "choice") {
+        exerciseHTML = `
+          <div class="options-stack">
+            ${lesson.options.map((opt, idx) => `
+              <label class="option-card">
+                <input type="radio" name="lesson-option" value="${idx}" />
+                <span>${opt}</span>
+              </label>
+            `).join("")}
+          </div>
+        `;
+      } else {
+        exerciseHTML = `
+          <textarea
+            id="lesson-textarea"
+            class="glass-textarea"
+            rows="4"
+            placeholder="${lesson.placeholder}"
+          ></textarea>
+        `;
+      }
+
+      document.getElementById("lesson-stage").innerHTML = `
+        <div class="stage-header">
+          <div>
+            <span class="pill-tag">Unidad ${lesson.module}: ${lesson.moduleName}</span>
+            <h3>${lesson.id}. ${lesson.title}</h3>
+          </div>
+          <span class="duration-pill">⏱ ${lesson.duration}</span>
+        </div>
+
+        <img src="${lesson.image}" alt="${lesson.title}" class="stage-banner" />
+
+        <div class="stage-concept">
+          <h4>Desarrollo y Caso Aplicado</h4>
+          <p>${lesson.concept}</p>
+          <div class="formula-box">
+            <strong>Estructura Clave:</strong> ${lesson.formula}
+          </div>
+        </div>
+
+        <div class="exercise-box">
+          <div class="exercise-header">
+            <h4>Práctica / Evaluación</h4>
+            <span class="status-badge ${isCompleted ? "done" : "pending"}">
+              ${isCompleted ? "Completado ✓" : "Pendiente"}
+            </span>
+          </div>
+          <p class="exercise-prompt">${lesson.prompt}</p>
+          ${exerciseHTML}
+          <div class="exercise-actions">
+            <button type="button" class="btn-primary" onclick="validateExercise(${lesson.id})">
+              Validar y Registrar Avance
+            </button>
+            ${lesson.id < course.lessons.length ? `
+              <button type="button" class="btn-secondary" onclick="selectLesson(${lesson.id + 1})">
+                Siguiente Lección →
+              </button>
+            ` : ""}
+          </div>
+          <div id="exercise-feedback" class="feedback-banner ${isCompleted ? "success show" : ""}">
+            ${isCompleted ? lesson.feedback : ""}
+          </div>
+        </div>
+      `;
+    }
+
+    /* =================================================================
+       ACCIONES E INTERACTIVIDAD GLOBAL
+       ================================================================= */
+    window.selectCourse = function(courseId) {
+      activeCourseId = courseId;
+      activeLessonId = 1;
+      activeModuleFilter = "all";
+      renderLeftMenu();
+      updateHeaderProgress();
+      renderCourseSections();
+      closeMobileSidebar();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    window.filterModules = function(mod) {
+      activeModuleFilter = mod;
+      renderCourseSections();
+    };
+
+    window.selectLesson = function(id) {
+      activeLessonId = id;
+      renderLessonsList();
+      renderLessonStage();
+    };
+
+    window.validateExercise = function(id) {
+      const course = coursesDatabase.find(c => c.id === activeCourseId);
+      const lesson = course.lessons.find(l => l.id === id);
+      const feedbackEl = document.getElementById("exercise-feedback");
+
+      if (lesson.exerciseType === "choice") {
+        const selected = document.querySelector('input[name="lesson-option"]:checked');
+        if (!selected) {
+          feedbackEl.className = "feedback-banner error show";
+          feedbackEl.textContent = "Selecciona una de las opciones antes de validar.";
+          return;
+        }
+        if (Number(selected.value) !== lesson.correctIndex) {
+          feedbackEl.className = "feedback-banner error show";
+          feedbackEl.textContent = "Revisa el enfoque de la metodología y elige la respuesta más constructiva y estructurada.";
+          return;
+        }
+      } else {
+        const textVal = document.getElementById("lesson-textarea").value.trim();
+        if (textVal.length < lesson.minLength) {
+          feedbackEl.className = "feedback-banner error show";
+          feedbackEl.textContent = `Desarrolla un poco más tu respuesta o ensayo (mínimo ${lesson.minLength} caracteres) para registrar la práctica.`;
+          return;
+        }
+      }
+
+      if (!academyProgress[activeCourseId]) {
+        academyProgress[activeCourseId] = [];
+      }
+      if (!academyProgress[activeCourseId].includes(id)) {
+        academyProgress[activeCourseId].push(id);
+        saveAcademyProgress();
+      }
+
+      feedbackEl.className = "feedback-banner success show";
+      feedbackEl.textContent = lesson.feedback;
+      renderLessonsList();
+      const badge = document.querySelector(".status-badge");
+      if (badge) {
+        badge.className = "status-badge done";
+        badge.textContent = "Completado ✓";
+      }
+    };
+
+    // Reiniciar curso activo
+    document.getElementById("reset-course-btn").addEventListener("click", () => {
+      if (confirm("¿Deseas reiniciar el progreso únicamente de este curso?")) {
+        academyProgress[activeCourseId] = [];
+        saveAcademyProgress();
+        renderCourseSections();
+      }
+    });
+
+    // Reiniciar toda la academia
+    document.getElementById("reset-all-btn").addEventListener("click", () => {
+      if (confirm("¿Deseas reiniciar el avance de los 5 cursos de Voz de Mando?")) {
+        academyProgress = {};
+        saveAcademyProgress();
+        renderCourseSections();
+      }
+    });
+
+    // Control de menú lateral en móvil/tablet
+    const sidebarEl = document.getElementById("courses-sidebar");
+    const overlayEl = document.getElementById("sidebar-overlay");
+
+    function closeMobileSidebar() {
+      sidebarEl.classList.remove("open");
+      overlayEl.classList.remove("open");
+    }
+
+    document.getElementById("menu-toggle-btn").addEventListener("click", () => {
+      sidebarEl.classList.add("open");
+      overlayEl.classList.add("open");
+    });
+
+    document.getElementById("close-sidebar-btn").addEventListener("click", closeMobileSidebar);
+    overlayEl.addEventListener("click", closeMobileSidebar);
+
+    // Inicializar plataforma
+    renderLeftMenu();
+    updateHeaderProgress();
+    renderCourseSections();
+  </script>
+</body>
+</html>
